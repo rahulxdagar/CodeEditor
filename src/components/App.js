@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
-import logo from './dytelogo.png'; // Tell webpack this JS file uses this image
+import logo from './dytelogo.png';
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
@@ -25,10 +25,17 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Dyte Code Editor by Rahul</h1>
+      <header>
+      <div class="overlay">
+        <h1>Dyte Code Editor
         <img src={logo} alt="Logo" />
-      </div>
+        </h1>
+        <h2>Made for VIT Campus Placement- Dyte 2022</h2>
+        <h3>By Rahul 18BCE00018</h3>
+	      <br></br>
+		  </div>
+      </header>
+      
       <div className="pane top-pane">
         <Editor
           language="xml"
@@ -44,18 +51,21 @@ function App() {
         />
         <Editor
           language="javascript"
-          displayName="JS"
+          displayName="JavaScript"
           value={js}
           onChange={setJs}
         />
       </div>
-      
+      <div >
+          <h2 id='live'>Live Preview</h2>
+      </div>
       <div className="pane">
+        
         <iframe
           srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
-          frameBorder="0"
+          frameBorder="2"
           width="100%"
           height="100%"
         />

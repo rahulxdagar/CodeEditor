@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 500px;
 }
 
 .top-pane {
@@ -17,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: .5rem;
-  background-color: hsl(100, 10%, 25%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .editor-container.collapsed {
@@ -58,17 +59,55 @@ body {
   overflow: hidden;
 }
 
-h1 {
-	margin: 1em 0 0.5em 0;
-	font-weight: 100;
-	text-transform: uppercase;
-	color: #00caa6;
-	font-style: italic;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 25px;
-	line-height: 30px;
-	text-shadow: 2px 3px 0 rgba(0,0,0,0.2);
+#live {
+  font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
   text-align: center;
+}
+
+/*{padding: 0; margin: 0; box-sizing: border-box;}*/
+header {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);	
+}
+
+h1 {
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+	cursor: pointer;
 }
 
 img {
